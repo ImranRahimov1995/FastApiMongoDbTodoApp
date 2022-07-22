@@ -92,3 +92,4 @@ venv
 
 data
 env
+.env
