@@ -2,4 +2,4 @@ fastapi
 uvicorn
 python-decouple
 beanie
-email-validatior
+email-validator
