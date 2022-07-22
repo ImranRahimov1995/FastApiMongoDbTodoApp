@@ -4,6 +4,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 
 from src.core.config import settings
 from src.models.user_model import User
+from src.api.api_v1.router import router
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -26,6 +27,8 @@ async def app_init():
             User,
         ]
     )
+
+app.include_router(router,prefix=settings.API_V1_STR)
 
 # Run command
 # uvicorn src.app:app --reload
